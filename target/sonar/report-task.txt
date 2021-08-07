@@ -3,5 +3,5 @@ projectKey=Miunmn_sustisoftware
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.22312
 dashboardUrl=https://sonarcloud.io/dashboard?id=Miunmn_sustisoftware
-ceTaskId=AXsiopdic5L9KSu6ZTBV
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXsiopdic5L9KSu6ZTBV
+ceTaskId=AXsiyrrFIQjQ08t9NArR
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXsiyrrFIQjQ08t9NArR
