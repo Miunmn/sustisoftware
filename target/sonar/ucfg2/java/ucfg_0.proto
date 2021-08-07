@@ -1,0 +1,40 @@
+
+__sonar_lambda_0$X
+NC:/Users/eprin/Documents/UTEC/software/susti/src/main/java/main/YatuSabes.java
+ 
+(I"1*­
+1X
+NC:/Users/eprin/Documents/UTEC/software/susti/src/main/java/main/YatuSabes.java
+ 
+(.Ò
+Ï
+X
+NC:/Users/eprin/Documents/UTEC/software/susti/src/main/java/main/YatuSabes.java
+2 
+(>
+%4java.lang.Integer"@main.YatuSabes#getNumber(Ljava/lang/Integer;)Ljava/lang/Integer;*"
+main.YatuSabes*2ÌÉ
+X
+NC:/Users/eprin/Documents/UTEC/software/susti/src/main/java/main/YatuSabes.java
+2 
+(I
+%5java.lang.String".java.lang.Integer#toString()Ljava/lang/String;*
+
+%4java.lang.Integer2
+toString()³
+°
+X
+NC:/Users/eprin/Documents/UTEC/software/susti/src/main/java/main/YatuSabes.java
+ 
+(I
+%6java.lang.String"__concat*
+Cantidad de valores *
+
+%5java.lang.String"t
+X
+NC:/Users/eprin/Documents/UTEC/software/susti/src/main/java/main/YatuSabes.java
+ 
+(I
+
+%6java.lang.StringB
+java.util.function.Supplier
