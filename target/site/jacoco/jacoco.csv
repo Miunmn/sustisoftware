@@ -1,8 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-susti,classes,LoginSystem,2,43,2,4,1,13,2,6,0,5
-susti,classes,Usuario,0,15,0,0,0,6,0,3,0,3
-susti,classes,Centro,0,25,0,0,0,10,0,5,0,5
-susti,classes,System,0,115,0,4,0,38,0,18,0,15
-susti,classes.database,UserDatabase,3,40,2,4,2,11,2,5,0,4
-susti,classes.database,CentroDatabase,0,94,0,14,0,25,0,14,0,7
-susti,main,AppSoluciones,3,136,1,5,1,30,1,5,0,3

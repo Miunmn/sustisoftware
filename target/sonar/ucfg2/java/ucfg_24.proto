@@ -1,80 +1,0 @@
-
-4classes.LoginSystem#authenticate(Lclasses/Usuario;)Ze
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java ("4*ñ
-2e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (²
-¯
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (
-%6classes.LoginSystem"__id*%*#
-classes.LoginSystem"
-
-instanceÞ
-Û
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (!
-
-%7void"+classes.LoginSystem#add(Lclasses/Usuario;)V*
-
-%6classes.LoginSystem*
-
-usuarioclasses.Usuario"o
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (
-""*¯
-3e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (!ÝÚ
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (/
-%3java.lang.String"/classes.Usuario#getPassword()Ljava/lang/String;*
-
-userclasses.Usuario2getPassword()àÝ
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java7 (L
-%4java.lang.String"/classes.Usuario#getPassword()Ljava/lang/String;*
-
-usuarioclasses.Usuario2getPassword()÷ô
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (M
-%5boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-
-%3java.lang.String*
-
-%4java.lang.String2equals(Ljava/lang/Object;)*
-2
-1*û
-4e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (À
-½
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (#
-%0classes.database.UserDatabase"__id*)*'
-classes.LoginSystem"
-userDatabaseØÕ
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java4 (E
-%1java.lang.String"+classes.Usuario#getUser()Ljava/lang/String;*
-
-usuarioclasses.Usuario2	getUser()ÃÀ
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (F
-%2classes.Usuario"Vclasses.database.UserDatabase#getUserFromUsername(Ljava/lang/String;)Lclasses/Usuario;*%
-#
-%0classes.database.UserDatabase*
-
-%1java.lang.String2'getUserFromUsername(Ljava/lang/String;)¢
-Ÿ
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (G
-userclasses.Usuario"__id*
-
-%2classes.Usuario*
-3
-1*Û
-1e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java ("o
-e
-[C:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/LoginSystem.java (
-"":
-usuarioclasses.UsuarioB
-classes.LoginSystem
