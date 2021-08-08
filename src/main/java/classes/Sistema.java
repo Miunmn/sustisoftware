@@ -4,21 +4,21 @@ import classes.database.CentroDatabase;
 
 import java.util.logging.Logger;
 
-public class System {
-    static Logger logger = Logger.getLogger(System.class.getName());
+public class Sistema {
+    static Logger logger = Logger.getLogger(Sistema.class.getName());
     public static final String SEPARATOR = "------------------";
 
     private final LoginSystem loginSystem;
     private final CentroDatabase centroDatabase;
 
-    public System(CentroDatabase centroDatabase , LoginSystem loginSystem) {
+    public Sistema(CentroDatabase centroDatabase , LoginSystem loginSystem) {
         this.centroDatabase = centroDatabase;
         this.loginSystem = loginSystem;
     }
 
     private void showAvanceVacunacion(){
         logger.info(()->"Cantidad de vacunados " +  centroDatabase.cantidaDeVacunados());
-        logger.info(()->"Cantidad de centro de vacunación " + centroDatabase.cantidadCentros());
+        logger.info(()->"Cantidad de centro de vacunacion " + centroDatabase.cantidadCentros());
     }
     public static void printSeparator(){
         logger.info(SEPARATOR);
@@ -59,6 +59,7 @@ public class System {
                 break;
             case 4:
 
+                break;
             default:
                 logger.info(()->"Cerrar sesion");
                 logout(user);
