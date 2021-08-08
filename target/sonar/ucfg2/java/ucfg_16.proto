@@ -1,0 +1,38 @@
+
+__sonar_lambda_7$classes.System`
+VC:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/System.javaA A(["startingBlock*—
+startingBlock`
+VC:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/System.javaA A([Y
+W
+
+__unknown_file (
+userclasses.Usuario"__id**
+classes.System"
+user*
+1*¥
+1`
+VC:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/System.javaA  A(.—Œ
+`
+VC:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/System.javaA1 A(?
+%32java.lang.String"+classes.Usuario#getUser()Ljava/lang/String;*
+
+userclasses.Usuario2	getUser()µ
+≤
+`
+VC:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/System.javaA  A(?
+%33java.lang.String"__concat*
+El usuario: *
+
+%32java.lang.String¡
+æ
+`
+VC:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/System.javaA  A([
+%34java.lang.String"__concat*
+
+%33java.lang.String*
+ acaba de cerrar sesi√≥n"}
+`
+VC:/Users/eprin/Documents/UTEC/software/sustisoftware/src/main/java/classes/System.javaA  A([
+
+%34java.lang.StringB
+java.util.function.Supplier
