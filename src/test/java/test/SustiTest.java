@@ -1,9 +1,8 @@
 package test;
-import classes.Centro;
 import classes.LoginSystem;
 import classes.Sistema;
 import classes.Usuario;
-import classes.database.CentroDatabase;
+import classes.database.SensorDatabase;
 import classes.database.UserDatabase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,22 +13,21 @@ import java.util.List;
 
 public class SustiTest {
     public final Sistema SYSTEMTOTEST = systemToTest();
-
     public Sistema systemToTest(){
         UserDatabase userDatabase = UserDatabase.getInstance();
-        CentroDatabase centroDatabase =  CentroDatabase.getInstance();
+        SensorDatabase sensorDatabase =  SensorDatabase.getInstance();
         LoginSystem loginSystem =  LoginSystem.getInstance();
         List<Usuario> usersToLogin = new ArrayList<>();
-        centroDatabase.add(new Centro("centro1", 1000,true));
-        centroDatabase.add(new Centro("centro2", 1000,true));
-        centroDatabase.add(new Centro("centro3", 1000,false));
-        centroDatabase.add(new Centro("centro4", 1000,true));
-        centroDatabase.add(new Centro("centro5", 1000,true));
+        sensorDatabase.crearSensor();
+        sensorDatabase.crearSensor();
+        sensorDatabase.crearSensor();
+        sensorDatabase.crearSensor();
+        sensorDatabase.crearSensor();
         usersToLogin.add(new Usuario("Esteban","nabetsE"));
         for (Usuario usuario : usersToLogin) {
             userDatabase.add(usuario);
         }
-        return new Sistema(centroDatabase, loginSystem);
+        return new Sistema(sensorDatabase, loginSystem);
     }
 
     @Test
@@ -42,13 +40,22 @@ public class SustiTest {
         AppSoluciones object = new AppSoluciones();
         AppSoluciones.main(null);
     }
-    @Test(invocationCount = 50)
-    public void test03(){
+    @Test(invocationCount = 500)
+    public void aprendizajeNF01(){
         AppSoluciones.reportescincuenta(SYSTEMTOTEST, new Usuario("Esteban","nabetsE"));
     }
 
     @Test()
-    public void test04() {
+    public void tesaprendizajeNF02() {
+        long begginTime = System.currentTimeMillis();
+        long maxExecutionTime = 2000;
+        AppSoluciones.selectAllOptions(SYSTEMTOTEST, new Usuario("Esteban","nabetsE") );
+        long finalTime = System.currentTimeMillis();
+        long executionTime = finalTime - begginTime;
+        Assert.assertTrue(executionTime < maxExecutionTime);
+    }
+    @Test()
+    public void testaprendizajeNF03(){
         long begginTime = System.currentTimeMillis();
         long maxExecutionTime = 2000;
         AppSoluciones.selectAllOptions(SYSTEMTOTEST, new Usuario("Esteban","nabetsE") );

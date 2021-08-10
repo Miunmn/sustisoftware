@@ -1,24 +1,23 @@
 package classes;
 
-import classes.database.CentroDatabase;
+import classes.database.SensorDatabase;
 
 import java.util.logging.Logger;
 
 public class Sistema {
     static Logger logger = Logger.getLogger(Sistema.class.getName());
-    public static final String SEPARATOR = "------------------";
+    public static final String SEPARATOR = "-----------------------------------";
 
     private final LoginSystem loginSystem;
-    private final CentroDatabase centroDatabase;
+    private final SensorDatabase sensorDatabase;
 
-    public Sistema(CentroDatabase centroDatabase , LoginSystem loginSystem) {
-        this.centroDatabase = centroDatabase;
+    public Sistema(SensorDatabase sensorDatabase, LoginSystem loginSystem) {
+        this.sensorDatabase = sensorDatabase;
         this.loginSystem = loginSystem;
     }
 
-    private void showAvanceVacunacion(){
-        logger.info(()->"Cantidad de vacunados " +  centroDatabase.cantidaDeVacunados());
-        logger.info(()->"Cantidad de centro de vacunacion " + centroDatabase.cantidadCentros());
+    private void showInformacionCompleta(){
+        sensorDatabase.showAllSensors();
     }
     public static void printSeparator(){
         logger.info(SEPARATOR);
@@ -27,9 +26,10 @@ public class Sistema {
     public void showOptions(){
         logger.info(
                 "Mostrando opciones\n" +
-                "1 ---> Ver Toda la informacion\n" +
-                "2 ---> Dar de alta a centro de vacunacion\n" +
-                "3 ---> Dar de baja a centro de vacunacion\n" +
+                "1 ---> Ver Toda la detallada de los sensores\n" +
+                "2 ---> Crear sensor\n" +
+                "3 ---> Eliminar sensor\n" +
+                "4 ---> Información consolidada\n" +
                 "Cualquier otro simbolo ---> Cerrar sesion"
         );
         printSeparator();
@@ -38,27 +38,41 @@ public class Sistema {
     public void selectoption(int option, Usuario user){
         switch (option){
             case 1:
-                showAvanceVacunacion();
+                showInformacionCompleta();
                 printSeparator();
                 break;
             case 2:
-                logger.info(()->"Dar de alta a un centro");
-                var centroDarAlta = "centro3";
-                centroDatabase.darDeAlta(centroDarAlta);
-                logger.info(()-> "El centro "+ centroDarAlta + " ha sido dado de baja");
-                showAvanceVacunacion();
+                logger.info(()->"Crear sensor");
+                var newid = sensorDatabase.crearSensor();
+                logger.info(()-> "El sensor "+ newid + " ha sido creado");
+                showInformacionCompleta();
                 printSeparator();
                 break;
             case 3:
-                logger.info(()->"Dar de baja a un centro");
-                var centroDarBaja = "centro3";
-                logger.info(()-> "El centro "+ centroDarBaja + " ha sido dado de baja");
-                centroDatabase.darDeBaja(centroDarBaja);
-                showAvanceVacunacion();
+                logger.info(()->"Eliminar sensor");
+                var centroDarBaja = "1";
+                logger.info(()-> "El sensor "+ centroDarBaja + " ha sido eliminado");
+                sensorDatabase.eliminarSensor(centroDarBaja);
+                showInformacionCompleta();
                 printSeparator();
                 break;
             case 4:
-
+                logger.info(()->"Mostrar cantidad maxima, minima y desviacion estandar de cada gas registrado");
+                logger.info(()->
+                        "El maximo CO registrado es\n"+
+                        sensorDatabase.getMaximoCo() + "\n"+
+                        "El maximo CO2 registrado es\n"+
+                        sensorDatabase.getMaximoCo2()+ "\n"+
+                        "El maximo PM registrado es\n"+
+                        sensorDatabase.getMaximoPm() +"\n"+
+                        "El minimo CO registrado es\n "+
+                        sensorDatabase.getMinimoCo() +"\n"+
+                        "El minimo CO2 registrado es\n "+
+                        sensorDatabase.getMinimoCo2() + "\n"+
+                        "El minimo PM registrado es\n "+
+                        sensorDatabase.getMinimoPm() + "\n"
+                );
+                printSeparator();
                 break;
             default:
                 logger.info(()->"Cerrar sesion");
@@ -70,6 +84,8 @@ public class Sistema {
 
 
     }
+
+
     public void logout(Usuario user){
         loginSystem.remove(user);
     }

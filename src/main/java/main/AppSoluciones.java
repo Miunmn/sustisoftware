@@ -1,9 +1,8 @@
 package main;
 
-import classes.Centro;
 import classes.LoginSystem;
 import classes.Usuario;
-import classes.database.CentroDatabase;
+import classes.database.SensorDatabase;
 import classes.database.UserDatabase;
 import classes.Sistema;
 
@@ -14,19 +13,19 @@ import java.util.logging.Logger;
 public class AppSoluciones {
     public static final Logger logger = Logger.getLogger(AppSoluciones.class.getName());
     public static final UserDatabase userDatabase = UserDatabase.getInstance();
-    public static final CentroDatabase centroDatabase =  CentroDatabase.getInstance();
+    public static final SensorDatabase SENSOR_DATABASE =  SensorDatabase.getInstance();
     public static final LoginSystem loginSystem =  LoginSystem.getInstance();
-    public static final Sistema SISTEMA = new Sistema(centroDatabase, loginSystem);
+    public static final Sistema SISTEMA = new Sistema(SENSOR_DATABASE, loginSystem);
 
     public static  void main(String []  args){
         List<Usuario> usersToLogin = new ArrayList<>();
-        centroDatabase.add(new Centro("centro1", 1000,true));
-        centroDatabase.add(new Centro("centro2", 1000,true));
-        centroDatabase.add(new Centro("centro3", 1000,false));
-        centroDatabase.add(new Centro("centro4", 1000,true));
-        centroDatabase.add(new Centro("centro5", 1000,true));
+        SENSOR_DATABASE.crearSensor();
+        SENSOR_DATABASE.crearSensor();
+        SENSOR_DATABASE.crearSensor();
+        SENSOR_DATABASE.crearSensor();
+        SENSOR_DATABASE.crearSensor();
         usersToLogin.add(new Usuario("Esteban","nabetsE"));
-        var system = new Sistema(centroDatabase,  loginSystem);
+        var system = new Sistema(SENSOR_DATABASE,  loginSystem);
         for (Usuario usuario : usersToLogin) {
             userDatabase.add(usuario);
         }
